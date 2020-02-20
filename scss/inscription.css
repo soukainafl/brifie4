@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header {
+  height: 100px;
+  background: #111111;
+  padding: 0 20px;
+  color: #fff;
+  font-family: "montserrat",sans-serif;
+}
+
+.logo {
+  line-height: 100px;
+  float: left;
+}
+
+.menu {
+  float: right;
+  line-height: 100px;
+}
+
+.menu a {
+  color: #fff;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  padding: 0 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu-btn {
+  float: right;
+}
+
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+  color: #eec408;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: 99;
+}
+
+.heade {
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/arteum.jpg");
+  -webkit-animation: animate 19s ease-out infinite;
+          animation: animate 19s ease-out infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-image: url("../img/arteum.jpg");
+  }
+  20% {
+    background-image: url("../img/dhiva.jpg");
+  }
+  40% {
+    background-image: url("../img/joey.jpg");
+  }
+  60% {
+    background-image: url("../img/koke.jpg");
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-image: url("../img/arteum.jpg");
+  }
+  20% {
+    background-image: url("../img/dhiva.jpg");
+  }
+  40% {
+    background-image: url("../img/joey.jpg");
+  }
+  60% {
+    background-image: url("../img/koke.jpg");
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .show-menu-btn, .hide-menu-btn {
+    display: block;
+    margin-right: 8px;
+  }
+  #slider {
+    width: 800px;
+  }
+  .header {
+    height: 100px;
+    background: #111111;
+    padding: 0 20px;
+    color: #fff;
+    position: fixed;
+    width: 95%;
+    z-index: 1;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    height: 23vh;
+    background: #111111;
+    border-radius: 0px 0px 50px 50px;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 47px 0;
+    line-height: normal;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    margin-top: 99px;
+  }
+  .menu a {
+    display: block;
+    padding: 6px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+  .heade {
+    width: 100%;
+  }
+}
+
+.contant {
+  font-family: 'open sans',sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-image: url("../img/Background.jfif");
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.head {
+  background-color: initial;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px  40px;
+}
+
+.head h2 {
+  margin: 0;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form button {
+  background-color: #eec408;
+  border: 2px solid  #eec408;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.success input {
+  border-color: #2ecc71;
+}
+
+.errour input {
+  border-color: #e74c3c;
+}
+
+.success .fa-check {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.errour .fa-exclamation-circle {
+  color: #e74c3C;
+  visibility: visible;
+}
+
+.errour small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.footer {
+  width: 100%;
+  background: #161616;
+  display: block;
+}
+
+.inner-footer {
+  width: 95%;
+  margin: auto;
+  padding: 30px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-items {
+  width: 25%;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer h1 {
+  padding: 10px 0;
+  font-size: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-items p {
+  color: grey;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.footer h2 {
+  margin: 10px 0;
+  color: grey;
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.border {
+  height: 2px;
+  width: 40px;
+  background: #ff9800;
+}
+
+ul {
+  list-style: none;
+  color: #ffff;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+ul a {
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+ul a:hover {
+  color: #ff9800;
+}
+
+ul li {
+  margin: 10px 0;
+  height: 25px;
+}
+
+li i {
+  margin-right: 20px;
+}
+
+.social-media {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.social-media a {
+  text-decoration: none;
+}
+
+.social-media i {
+  height: 15px;
+  width: 15px;
+  margin: 20px 5px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #000;
+  border: 1px solid grey;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.social-media i:hover {
+  background: grey;
+}
+
+.footer-bottom {
+  padding: 10px;
+  background-color: #3d545f;
+  color: #fff;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-items {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-items {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=inscription.css.map */

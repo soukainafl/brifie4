@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/inscription.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fotter.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>Inscription</title>
+</head>
+<body>
+    <div class="header">
+        <h2 class="logo"><img src="../img/img.png"></h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+    
+        <ul class="menu">
+          <a href="galerie.html">Galerie<i class="fab fa-envira"></i></a>
+          <a href="inscription.html">Inscription <i class="far fa-user"></i></i></a>
+          <a href="reservation.html">Reservation<i class="fas fa-concierge-bell"></i></a>
+          <label id="brf" for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+          </label>
+        </ul>
+      </div>
+       <div class="heade">
+        
+      </div>
+
+<div class="contant">
+      <div class="container">
+        <div class="head">
+       <h2>inscription</h2>
+      </div>
+         <form class="form" id="form">
+         <div class="  form-control ">
+         <label> NOM</label>
+         <input type="text" placeholder="nom" id="username" onkeyup='this.value=this.value.toUpperCase()'>
+         <i class="fas fa-check"></i>
+         <i class="fas fa-exclamation-circle"></i>
+       <small>Error message</small>
+  
+        </div>
+        <div class="  form-control ">
+          <label> PRENOM</label>
+          <input type="text" placeholder="prenom" id="prenom" onkeyup='this.value=this.value.toUpperCase()'>
+          <i class="fas fa-check"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+   
+         </div>
+         <div class="form-control">
+          <label> la date de naissance</label>
+          <input type="date" placeholder="date-naiccanse" id="date">
+          <i class="fas fa-check"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+   
+         </div>
+        <div class="  form-control ">
+          <label>email</label>
+          <input type="text" placeholder="Email@gmail.com" id="email" onkeyup='this.value=this.value.toUpperCase()' >
+          <i class="fas fa-check"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+   
+         </div>
+         <div class="form-control">
+          <label> password</label>
+          <input type="text" placeholder="password" id="password">
+          <i class="fas fa-check"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+   
+         </div>
+         <div class="form-control">
+          <label> password confirmation</label>
+          <input type="text" placeholder="password two" id="password2">
+          <i class="fas fa-check"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+   
+         </div>
+       <button>Enregistrement</button>
+      </form>
+        </div>
+      </div>
+
+        <div class="footer">
+          <div class="inner-footer">
+         <div class="footer-items">
+          <h1>LOCATION DE VÉHICULES</h1>
+          <p>
+            Voiture, break, 4x4, monospace, camion ou utilitaire - réservez le 
+            véhicule que vous souhaitez chez MARINE CAR. Consultez aussi nos
+             offres spéciales pour bénéficier de tarifs économiques partout dans le monde !
+        
+            Chez MARINE CAR, vous trouverez uniquement des modèles
+             de véhicules de location de fabricants renommés
+            , parmi lesquels des marques de prestige comme Audi, BMW ou Mercedes.
+           </p>
+         </div>
+           <div class="footer-items">
+             <h2>quiks links</h2>
+             <div class="border"></div>
+             <ul>
+               <a href=""><li>GALerie</li></a>
+               <a href=""><li>Inscription</li></a>
+               <a href=""><li>Reservation </li></a>
+               
+             </ul>
+             </div>
+             <div class="footer-items">
+              <h2>    NOS CATÉGORIES</h2>
+              <div class="border"></div>
+              <ul>
+                <a href=""><li> Economiques</li></a>
+                <a href=""><li>   Voitures 4x4</li></a>
+                <a href=""><li>Utilitaires </li></a>
+                
+              </ul>
+              </div>
+           
+              <div class="footer-items">
+                <h2>    INFOS DE CONTACT</h2>
+                <div class="border"></div>
+                <ul>
+              <li><i class="fas fa-map-marker-alt"></i>Voir sur Google Maps</li>
+              <li><i class="fas fa-fax"></i>335421567</li>
+              <li><i class="fas fa-envelope"></i>care@gmil.com</li>    
+                </ul>
+                <div class="social-media">
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i> </a>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                </div>
+              </div>
+              
+          
+        </div>
+        <div class="footer-bottom">
+          Copyright &copy; Location des voiture 2020. All right reserved.
+        </div> 
+        </div>
+        
+            
+
+              <script>
+              const form= document.getElementById('form');
+              const username=document.getElementById('username');
+              const prenom=document.getElementById('prenom');
+              const date=document.getElementById('date');
+              const email=document.getElementById('email');
+              const password=document.getElementById('password');
+              const password2=document.getElementById('password2');
+               form.addEventListener('submit',(e) => {
+                e.preventDefault();
+                checkInputs();
+               });
+                function checkInputs()
+                {
+                  //get the values from the inputs
+                  const usernamevalue= username.value.trim();
+                  const prenomvalue=prenom.value.trim();
+                  const datevalue=date.value.trim();
+                  const emailvalue=email.value.trim();
+                  const passwordvalue=password.value.trim();
+                  const password2value=password2.value.trim();
+
+                  if (usernamevalue==='')
+                  {
+                    //show error 
+                    //add error class
+                    setErrorFor(username,'username  cannot be blank');
+                     
+                  }
+                    
+                    else {
+                    setSuccessFor(username);
+                  } 
+                  if (prenomvalue==='')
+                  {
+                   setErrorFor(prenom,'prenom cannot be blank');
+                   
+                  }else
+                  { 
+                    setSuccessFor(prenom);
+                  }
+                  if (datevalue==='')
+                  {
+                   setErrorFor(date,'date de naicssance cannot be blank');
+                   
+                  }else
+                  { 
+                    setSuccessFor(date);
+                  }
+                
+                  if (emailvalue==='')
+                  {
+                    setErrorFor(email,'email cannot be blank');
+                    
+                  } 
+                  else if (!isemail(emailvalue))
+                  {
+                    setErrorFor(email,'email is not valide');
+                
+                  }
+                  else { 
+                    setSuccessFor(email);
+                  }
+                  if(passwordvalue==='')
+                  {
+                    setErrorFor(password,'password cannot be blank'); 
+                  }
+                  else
+                  {
+                    setSuccessFor(password);
+                  }
+                  if(password2value==="")
+                  {
+
+                    setErrorFor(password2,'password cannot be blank'); 
+
+                  } else if(passwordvalue!==password2value)
+                  {
+                    setErrorFor(password2,'password2 nest pas coorecte');
+                  } else
+                  {
+                    setSuccessFor(password2);
+                  }
+                 
+                }
+                function setErrorFor (input,message)
+                {
+                  const formconrol = input.parentElement;
+                  const small = formconrol.querySelector('small');
+                  small.innerText=message;
+                  formconrol.className='errour form-control';
+                }
+                function  setSuccessFor (input)
+                {
+                  const formconrol = input.parentElement;
+                 
+                  formconrol.className='success form-control';
+                }
+               function isemail(email)
+               {
+                 return /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}))$/.test(email);
+                
+               }
+            
+              </script>
+
+
+
+    
+</body>
+</html>

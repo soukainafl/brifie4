@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/reservation.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fotter.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>Reservation</title>
+</head>
+<body>
+    
+    <div class="header">
+        <h2 class="logo"><img src="../img/img.png"></h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+    
+        <ul class="menu">
+          <a href="galerie.html">Galerie<i class="fab fa-envira"></i></a>
+          <a href="inscription.html">Inscription <i class="far fa-user"></i></i></a>
+          <a href="reservation.html">Reservation<i class="fas fa-concierge-bell"></i></a>
+    
+          <label id="brf" for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+          </label>
+        </ul>
+      </div>
+       <div class="heade">
+        
+      </div>
+
+        <div class="box1">
+            <h1>
+                RÉSERVATION
+            </h1>
+        </div>
+
+
+  <div class="flex-container">
+    <div class="gla1">
+      <div class="imag1" id="imgs1">
+   
+      </div>
+      <div class="tb">
+     <h1>Fiat</h1>
+     <p>
+      A partir de 150 DH/jour
+      
+     </p> <button  class="myButton" onclick="clicked()">resérvez maintenant</button>
+     <table class="table">
+      <tr>
+        <td><i class="fas fa-tachometer-alt"></i> Essence</td>
+        <td><i class="fa fa-male"></i> 5</td>
+
+        <td><i class="fa fa-suitcase"></i> 4</td>
+        <td><i class="fas fa-snowflake"></i></i> OUI</td>
+      </tr>
+    </table>
+    
+      </div>
+    </div>
+    <div class="gla1">
+      <div class="imag2" id="imgs2">
+   
+      </div>
+      <div class="tb">
+     <h1>BMW</h1>
+     <p>
+      A partir de 250 DH/jour
+      
+     </p>
+     <button  class="myButton" onclick="clicked2()">resérvez maintenant</button>
+     <table class="table">
+      <tr>
+        <td><i class="fas fa-tachometer-alt"></i> Essence</td>
+        <td><i class="fa fa-male"></i> 5</td>
+
+        <td><i class="fa fa-suitcase"></i> 4</td>
+        <td><i class="fas fa-snowflake"></i></i> OUI</td>
+      </tr>
+    </table>
+    
+      </div>
+    </div>
+    <div class="gla1">
+      <div class="imag3" id="imgs3">
+   
+      </div>
+      <div class="tb">
+     <h1>Mercedes</h1>
+     <p>
+      A partir de 300 DH/jour
+      
+     </p>
+     <button  class="myButton" onclick="clicked3()">resérvez maintenant</button>
+     <table class="table">
+      <tr>
+        <td><i class="fas fa-tachometer-alt"></i> Essence</td>
+        <td><i class="fa fa-male"></i> 5</td>
+
+        <td><i class="fa fa-suitcase"></i> 4</td>
+        <td><i class="fas fa-snowflake"></i></i> OUI</td>
+      </tr>
+    </table>
+    
+      </div>
+    </div>  
+    <div class="gla1">
+      <div class="imag4" id="imgs4">
+   
+      </div>
+      <div class="tb">
+     <h1>PEUGEOT</h1>
+     <p>
+      A partir de 200 DH/jour
+      
+     </p>
+     <button href="#" class="myButton" onclick="clicked4()">resérvez maintenant</button>
+     <table class="table">
+      <tr>
+        <td><i class="fas fa-tachometer-alt"></i> Essence</td>
+        <td><i class="fa fa-male"></i> 5</td>
+
+        <td><i class="fa fa-suitcase"></i> 4</td>
+        <td><i class="fas fa-snowflake"></i></i> OUI</td>
+      </tr>
+    </table>
+    
+      </div>
+    </div>
+   
+  </div>
+  <div class="reserv" id="box3">
+  <div class="form">
+      <div class="input-field">
+<div id="photo" id="image">
+
+</div>
+</div>
+<div class="input-field">
+<label> Nom:</label>
+<input type="text" placeholder="nom" id="name">
+<!-- <small>Error message</small> -->
+</div>
+<div class="input-field">
+<label> Date de obtinere votre permis:</label>
+<input type="date" placeholder="date" id="date">
+</div>
+<div class="input-field">
+<label> Période :</label>
+<select id="selected" value="choiser" onchange=" ">
+<option value="FIAT">FIAT</option>
+<option value="BMW">BMW</option>
+<option value="PEUGEOT">PEUGEOT</option>
+<option value="Mercedes">MERCEDES</option>
+</select>
+</div>
+
+<div class="input-field">
+<label> Date départe :</label>
+<input type="date" id="dep">
+</div>
+<div class="input-field">
+  <label> Date fin :</label>
+<input type="date" id="dfin">
+</div>
+<div class="input-field">
+  <label> Nombre DE Personne:</label>
+  
+<input type="number" id="nbr" min="1" max="5" value="0">
+</div>
+<div class="input-field">
+  <button  class="myButton" onclick="validation()">confirmée </button>
+</div>
+</div>
+
+
+</div>
+<div class="conf" id="alertd">
+  <button onclick="closes()"><i class="fas fa-window-close"></i></button>
+  <div id="affichage"></div>
+  <div id="phot1">
+    
+  </div>
+</div>
+
+      <div class="footer">
+        <div class="inner-footer">
+       <div class="footer-items">
+        <h1>LOCATION DE VÉHICULES</h1>
+        <p>
+          Voiture, break, 4x4, monospace, camion ou utilitaire - réservez le 
+          véhicule que vous souhaitez chez MARINE CAR. Consultez aussi nos
+           offres spéciales pour bénéficier de tarifs économiques partout dans le monde !
+      
+          Chez MARINE CAR, vous trouverez uniquement des modèles
+           de véhicules de location de fabricants renommés
+          , parmi lesquels des marques de prestige comme Audi, BMW ou Mercedes.
+         </p>
+       </div>
+         <div class="footer-items">
+           <h2>quiks links</h2>
+           <div class="border"></div>
+           <ul>
+             <a href=""><li>GALerie</li></a>
+             <a href=""><li>Inscription</li></a>
+             <a href=""><li>Reservation </li></a>
+             
+           </ul>
+           </div>
+           <div class="footer-items">
+            <h2>    NOS CATÉGORIES</h2>
+            <div class="border"></div>
+            <ul>
+              <a href=""><li> Economiques</li></a>
+              <a href=""><li>   Voitures 4x4</li></a>
+              <a href=""><li>Utilitaires </li></a>
+              
+            </ul>
+            </div>
+         
+            <div class="footer-items">
+              <h2>    INFOS DE CONTACT</h2>
+              <div class="border"></div>
+              <ul>
+            <li><i class="fas fa-map-marker-alt"></i>Voir sur Google Maps</li>
+            <li><i class="fas fa-fax"></i>335421567</li>
+            <li><i class="fas fa-envelope"></i>care@gmil.com</li>    
+              </ul>
+              <div class="social-media">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i> </a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-google-plus"></i></a>
+              </div>
+            </div>
+            
+        
+      </div>
+      <div class="footer-bottom">
+        Copyright &copy; Location des voiture 2020. All right reserved.
+      </div> 
+      </div>
+      
+    <script>
+ 
+
+    function clicked(){
+      var imgG= document.getElementById("imgs1");
+      var imgd=document.getElementById("phot1");
+       var affich = document.getElementById("photo");
+        affich.setAttribute("class",imgG.className);
+        imgd.setAttribute("class",imgG.className);
+        alert("valid");
+      
+    }
+  
+
+    function clicked2(){
+      var imgG= document.getElementById("imgs2");
+      var imgd=document.getElementById("phot1");
+    var affich = document.getElementById("photo");
+        affich.setAttribute("class",imgG.className);
+        imgd.setAttribute("class",imgG.className);
+        alert("valid");
+      
+    }
+ 
+    function clicked3(){
+      var imgG= document.getElementById("imgs3");
+      var imgd=document.getElementById("phot1");
+       var affich = document.getElementById("photo");
+        affich.setAttribute("class",imgG.className);
+        imgd.setAttribute("class",imgG.className);
+        alert("valid");
+      
+    }
+ 
+
+    function clicked4(){
+      var imgG= document.getElementById("imgs4");
+      var imgd=document.getElementById("phot1");
+       var affich = document.getElementById("photo");
+        affich.setAttribute("class",imgG.className);
+        imgd.setAttribute("class",imgG.className);
+        alert("valid");
+      
+    }
+  
+    function clik()
+    {
+        var img1= document.getElementById("imgs1");
+    var imgrv=document.getElementById("phot1");
+      imgrv.setAttribute("class",img1.className);
+      alert("validDDDDD bien");
+    }
+  
+    function validation()
+    {
+      var photo =document.getElementById("photo").value;
+      var nom=document.getElementById("name").value;
+      var datedeparte= document.getElementById("dep").value;
+      var datefin= document.getElementById("dfin").value;
+      var dat= document.getElementById("date");
+      var periode = document.getElementById("selected");
+      var nbrp = document.getElementById("nbr").value;
+      var dd=new Date(date.value); 
+       var d=new Date(); 
+                 
+       var dtext=dd.getDate()+dd.getMonth()*30+dd.getFullYear()*365; 
+        var dnow=d.getDate()+d.getMonth()*30+d.getFullYear()*365; 
+        var affichage= document.getElementById("affichage");
+         var prd = periode.options[periode.selectedIndex].text;
+      var regex = /^[A-Z]/;
+      var cpt=0;
+                 if(nom=="" || dat=="" || prd=="" || nbrp==""|| datedeparte=="" || datefin=="")
+                    {
+                        window.alert(" entre tout les champes  SVP ");
+                        cpt++;
+                    }
+                    if( dat!="" && prd!="" && nbrp!="" && nom!="")
+                    {
+                    if(!regex.test(nom)) 
+
+                    {
+                        
+                        window.alert(" le  nom is not  majuscule");
+                        cpt++;
+                    }
+                    if(datedeparte>datefin)
+                    {
+                      window.alert(" la date départ doit etre inférieur a date fin");
+                      cpt++;
+                    }
+                   
+                     if(dnow-dtext<=730) 
+                     {  
+                        alert('dsl votre premis et new');
+                        cpt++; 
+                     }
+
+                    
+                       
+
+                    }
+                    if (cpt==0)
+                    {
+                window.alert("valide l'inscription");
+                dalert.style.display="block";
+     affichage.innerHTML="Le Nom est :" + nom + "<br>"  + " Le Date est :" + dat + "<br>" + " Le Produit  est : "  +  prd + "<br>"  + " La Date départ  est : " + datedeparte +  "<br>"  + " La Date départ  est : " + datefin + "<br>" + "Le Nombre de personne est : " + nbrp + "<br>"+ "la photo que vous ajouter est:";
+   
+    
+               }
+             
+    }
+    var dalert= document.getElementById("alertd");
+    function closes(){
+
+      dalert.style.display="none";
+    }
+    </script>
+</body>
+</html>
