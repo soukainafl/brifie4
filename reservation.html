@@ -49,7 +49,7 @@
      <p>
       A partir de 150 DH/jour
       
-     </p> <button  class="myButton" onclick="clicked()">resérvez maintenant</button>
+     </p> <button  class="myButton" onclick="IMAG(1)">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -72,7 +72,7 @@
       A partir de 250 DH/jour
       
      </p>
-     <button  class="myButton" onclick="clicked2()">resérvez maintenant</button>
+     <button  class="myButton" onclick="IMAG(2)">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -95,7 +95,7 @@
       A partir de 300 DH/jour
       
      </p>
-     <button  class="myButton" onclick="clicked3()">resérvez maintenant</button>
+     <button  class="myButton" onclick="IMAG(3)">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -118,7 +118,7 @@
       A partir de 200 DH/jour
       
      </p>
-     <button href="#" class="myButton" onclick="clicked4()">resérvez maintenant</button>
+     <button href="#" class="myButton" onclick="IMAG(4)">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -247,56 +247,41 @@
       
     <script>
  
-
-    function clicked(){
-      var imgG= document.getElementById("imgs1");
-      var imgd=document.getElementById("phot1");
-       var affich = document.getElementById("photo");
-        affich.setAttribute("class",imgG.className);
-        imgd.setAttribute("class",imgG.className);
-        alert("valid");
-      
-    }
-  
-
-    function clicked2(){
-      var imgG= document.getElementById("imgs2");
-      var imgd=document.getElementById("phot1");
-    var affich = document.getElementById("photo");
-        affich.setAttribute("class",imgG.className);
-        imgd.setAttribute("class",imgG.className);
-        alert("valid");
-      
-    }
- 
-    function clicked3(){
-      var imgG= document.getElementById("imgs3");
-      var imgd=document.getElementById("phot1");
-       var affich = document.getElementById("photo");
-        affich.setAttribute("class",imgG.className);
-        imgd.setAttribute("class",imgG.className);
-        alert("valid");
-      
-    }
- 
-
-    function clicked4(){
-      var imgG= document.getElementById("imgs4");
-      var imgd=document.getElementById("phot1");
-       var affich = document.getElementById("photo");
-        affich.setAttribute("class",imgG.className);
-        imgd.setAttribute("class",imgG.className);
-        alert("valid");
-      
-    }
-  
-    function clik()
+    function IMAG(imga)
     {
-        var img1= document.getElementById("imgs1");
-    var imgrv=document.getElementById("phot1");
-      imgrv.setAttribute("class",img1.className);
-      alert("validDDDDD bien");
-    }
+      // ID IMAGE
+      var imgG1= document.getElementById("imgs1");
+      var imgG2= document.getElementById("imgs2");
+      var imgG4= document.getElementById("imgs4");
+      var imgG3= document.getElementById("imgs3");
+      // DIV RESEVATION
+      var imgd=document.getElementById("phot1");
+      // DIV  CONFIRMATION 
+       var affich = document.getElementById("photo");
+       if (imga==1)
+       {
+        affich.setAttribute("class",imgG1.className);
+        imgd.setAttribute("class",imgG1.className);
+       }
+       if (imga==2)
+       {
+        affich.setAttribute("class",imgG2.className);
+        imgd.setAttribute("class",imgG2.className);
+       }
+       if (imga==3)
+       {
+        affich.setAttribute("class",imgG3.className);
+        imgd.setAttribute("class",imgG3.className);
+       }
+       if (imga==4)
+       {
+        affich.setAttribute("class",imgG4.className);
+        imgd.setAttribute("class",imgG4.className);
+       }
+        alert("valide"); 
+           
+            }
+
   
     function validation()
     {
@@ -304,7 +289,7 @@
       var nom=document.getElementById("name").value;
       var datedeparte= document.getElementById("dep").value;
       var datefin= document.getElementById("dfin").value;
-      var dat= document.getElementById("date");
+      var dat= document.getElementById("date").value;
       var periode = document.getElementById("selected");
       var nbrp = document.getElementById("nbr").value;
       var dd=new Date(date.value); 
@@ -318,7 +303,7 @@
       var cpt=0;
                  if(nom=="" || dat=="" || prd=="" || nbrp==""|| datedeparte=="" || datefin=="")
                     {
-                        window.alert(" entre tout les champes  SVP ");
+                        window.alert(" Entre tout les champes ");
                         cpt++;
                     }
                     if( dat!="" && prd!="" && nbrp!="" && nom!="")
@@ -326,8 +311,7 @@
                     if(!regex.test(nom)) 
 
                     {
-                        
-                        window.alert(" le  nom is not  majuscule");
+                        window.alert(" name is not  majuscule");
                         cpt++;
                     }
                     if(datedeparte>datefin)
@@ -338,27 +322,20 @@
                    
                      if(dnow-dtext<=730) 
                      {  
-                        alert('dsl votre premis et new');
+                        alert('Votre commande a été annulée');
                         cpt++; 
                      }
-
-                    
-                       
-
                     }
                     if (cpt==0)
                     {
-                window.alert("valide l'inscription");
+                window.alert("Votre demande a été acceptée");
                 dalert.style.display="block";
-     affichage.innerHTML="Le Nom est :" + nom + "<br>"  + " Le Date est :" + dat + "<br>" + " Le Produit  est : "  +  prd + "<br>"  + " La Date départ  est : " + datedeparte +  "<br>"  + " La Date départ  est : " + datefin + "<br>" + "Le Nombre de personne est : " + nbrp + "<br>"+ "la photo que vous ajouter est:";
-   
-    
-               }
-             
+     affichage.innerHTML="Le Nom est :" + nom + "<br>"  + " Le Date est :" + dat + "<br>" + " Le Type  est : "  +  prd + "<br>"  + " La Date départ  est : " + datedeparte +  "<br>"  + " La Date départ  est : " + datefin + "<br>" + "Le Nombre de personne est : " + nbrp + "<br>"+ "la produit que vous ajouter est:";
+
+               }      
     }
     var dalert= document.getElementById("alertd");
     function closes(){
-
       dalert.style.display="none";
     }
     </script>
