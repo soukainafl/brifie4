@@ -49,7 +49,7 @@
      <p>
       A partir de 150 DH/jour
       
-     </p> <button  class="myButton" onclick="IMAG(1)">resérvez maintenant</button>
+     </p> <button href="#" class="myButton" onclick="IMAG('imgs1')">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -72,7 +72,7 @@
       A partir de 250 DH/jour
       
      </p>
-     <button  class="myButton" onclick="IMAG(2)">resérvez maintenant</button>
+     <button  class="myButton" onclick="IMAG('imgs2')">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -95,7 +95,7 @@
       A partir de 300 DH/jour
       
      </p>
-     <button  class="myButton" onclick="IMAG(3)">resérvez maintenant</button>
+     <button  class="myButton" onclick="IMAG('imgs3')">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -118,7 +118,7 @@
       A partir de 200 DH/jour
       
      </p>
-     <button href="#" class="myButton" onclick="IMAG(4)">resérvez maintenant</button>
+     <button href="#" class="myButton" onclick="IMAG('imgs4')">resérvez maintenant</button>
      <table class="table">
       <tr>
         <td><i class="fas fa-tachometer-alt"></i> Essence</td>
@@ -247,42 +247,19 @@
       
     <script>
  
-    function IMAG(imga)
-    {
-      // ID IMAGE
-      var imgG1= document.getElementById("imgs1");
-      var imgG2= document.getElementById("imgs2");
-      var imgG4= document.getElementById("imgs4");
-      var imgG3= document.getElementById("imgs3");
-      // DIV RESEVATION
-      var imgd=document.getElementById("phot1");
-      // DIV  CONFIRMATION 
-       var affich = document.getElementById("photo");
-       if (imga==1)
-       {
-        affich.setAttribute("class",imgG1.className);
-        imgd.setAttribute("class",imgG1.className);
-       }
-       if (imga==2)
-       {
-        affich.setAttribute("class",imgG2.className);
-        imgd.setAttribute("class",imgG2.className);
-       }
-       if (imga==3)
-       {
-        affich.setAttribute("class",imgG3.className);
-        imgd.setAttribute("class",imgG3.className);
-       }
-       if (imga==4)
-       {
-        affich.setAttribute("class",imgG4.className);
-        imgd.setAttribute("class",imgG4.className);
-       }
-        alert("valide"); 
-           
-            }
 
-  
+      function IMAG(idImg)
+     {var imgGs= document.getElementById(idImg);
+      var imgd=document.getElementById("phot1"); 
+      var affich = document.getElementById("photo");
+
+        affich.setAttribute("class",imgGs.className);
+        imgd.setAttribute("class",imgGs.className);
+       
+       photo.style.display="block";
+          }
+   
+
     function validation()
     {
       var photo =document.getElementById("photo").value;
@@ -311,7 +288,8 @@
                     if(!regex.test(nom)) 
 
                     {
-                        window.alert(" name is not  majuscule");
+                        
+                        window.alert(" veuillez saisir le nom en majuscules");
                         cpt++;
                     }
                     if(datedeparte>datefin)
@@ -322,20 +300,27 @@
                    
                      if(dnow-dtext<=730) 
                      {  
-                        alert('Votre commande a été annulée');
+                        alert('Votre réservation  a été annulée');
                         cpt++; 
                      }
+
+                    
+                       
+
                     }
                     if (cpt==0)
                     {
-                window.alert("Votre demande a été acceptée");
+                window.alert("valide l'inscription");
                 dalert.style.display="block";
-     affichage.innerHTML="Le Nom est :" + nom + "<br>"  + " Le Date est :" + dat + "<br>" + " Le Type  est : "  +  prd + "<br>"  + " La Date départ  est : " + datedeparte +  "<br>"  + " La Date départ  est : " + datefin + "<br>" + "Le Nombre de personne est : " + nbrp + "<br>"+ "la produit que vous ajouter est:";
-
-               }      
+     affichage.innerHTML="Le Nom est :" + nom + "<br>"  + " Le Date est :" + dat + "<br>" + " Le Produit  est : "  +  prd + "<br>"  + " La Date départ  est : " + datedeparte +  "<br>"  + " La Date départ  est : " + datefin + "<br>" + "Le Nombre de personne est : " + nbrp + "<br>"+ "la photo que vous ajouter est:";
+   
+    
+               }
+             
     }
     var dalert= document.getElementById("alertd");
     function closes(){
+
       dalert.style.display="none";
     }
     </script>
